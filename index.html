@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Whittebz Workspace MCP is a personal Google Drive and Google Slides integration for user-directed AI assistant tasks. Learn about its features, permissions and privacy.">
+  <title>Whittebz Workspace MCP — Drive &amp; Slides integration</title>
+  <link rel="canonical" href="https://whittebz.github.io/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./"><span class="mark" aria-hidden="true">w</span>Whittebz Workspace MCP</a>
+  <nav aria-label="Main navigation"><a href="#permissions">Permissions</a><a href="privacy.html">Privacy policy</a></nav>
+</header>
+<main id="main">
+  <div class="hero">
+    <p class="eyebrow">Personal Google Workspace integration</p>
+    <h1>Your files and slides.<br>Tasks you choose.</h1>
+    <p class="lede">Whittebz Workspace MCP connects a locally configured AI assistant to Google Drive and Google Slides, so you can find files, manage documents and work on presentations through your own instructions.</p>
+    <p class="subtle">Operated by Whittebz for personal use. Google account access requires your authorization.</p>
+  </div>
+  <div class="flow" aria-label="How the integration works">
+    <div><strong>You give an instruction</strong><small>Choose the file and the task</small></div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div><strong>Your assistant calls MCP</strong><small>Through your configured client</small></div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div><strong>Google applies your permissions</strong><small>Drive and Slides APIs</small></div>
+  </div>
+  <section class="section" aria-labelledby="features-title">
+    <div class="section-head"><h2 id="features-title">What it does</h2><p>This is a personal integration built around Google API tools exposed through the Model Context Protocol (MCP). The tools available depend on the MCP servers and permissions you enable.</p></div>
+    <div class="features">
+      <article class="feature"><span class="tag">Google Drive</span><h3>Find and organize files</h3><p>Search your authorized files, retrieve content or metadata, upload or export documents, and manage folders, sharing and file organization when you request those actions.</p></article>
+      <article class="feature"><span class="tag">Google Slides</span><h3>Read and edit presentations</h3><p>Read slides and speaker notes, create presentations, edit text and visual elements, arrange slides, and export presentations using the enabled tools.</p></article>
+    </div>
+  </section>
+  <section class="section" id="permissions" aria-labelledby="permissions-title">
+    <div class="section-head"><h2 id="permissions-title">Why it asks<br>for access</h2><p>The configured Drive and Slides servers request the following permissions. The Google consent screen shows the permissions for each connection; access is limited by the account and permissions you grant.</p></div>
+    <div class="scope-list">
+      <div class="scope"><div><strong>Google Drive</strong><code>https://www.googleapis.com/auth/drive</code></div><p>Allows reading and managing accessible Drive files, including existing files that you ask the assistant to find or edit, exports, comments and sharing. This is broad access: enabled tools may also move files to trash or delete them. Per-file access would limit discovery and management of existing files across your Drive.</p></div>
+      <div class="scope"><div><strong>Google Slides</strong><code>https://www.googleapis.com/auth/presentations</code></div><p>Allows reading and editing presentations, including slide content, shapes, tables and speaker notes. The Slides connection also uses Drive access for file operations such as export and sharing.</p></div>
+      <div class="scope"><div><strong>Account identity</strong><code>openid<br>https://www.googleapis.com/auth/userinfo.email</code></div><p>Identifies the Google account linked to the integration, so the connection can show which account is authorized.</p></div>
+    </div>
+    <div class="notice"><p><strong>Your instructions determine the task.</strong> Review actions in your assistant and configure its confirmation settings for changes to files and sharing. The breadth of an OAuth permission is separate from the specific task you request.</p></div>
+  </section>
+  <section class="section" aria-labelledby="data-title">
+    <div class="section-head"><h2 id="data-title">Where your<br>data goes</h2><div><p>OAuth credentials are saved by the configured MCP server on the machine running it. Tool results can enter the assistant conversation and be sent to the AI provider you choose to fulfill your request. Your client and provider settings govern conversation storage and processing.</p><p>This public website provides information only. It has no Google sign-in, file upload, analytics scripts or access to your Google files. Read the <a href="privacy.html">privacy policy</a> for details.</p></div></div>
+  </section>
+  <section class="section" aria-labelledby="control-title">
+    <div class="section-head"><h2 id="control-title">Connect and<br>stay in control</h2><div><ol class="steps"><li>Configure the Drive or Slides MCP server in your assistant client.</li><li>Use the server’s login action to open Google’s authorization page. Review the app identity and requested permissions before approving.</li><li>Choose a file or presentation and ask the assistant to perform a task. Check the result and any requested confirmations.</li></ol><p>You can withdraw Google access at any time in <a href="https://myaccount.google.com/connections">your Google Account connections</a>.</p></div></div>
+  </section>
+  <section class="section" aria-labelledby="contact-title">
+    <div class="section-head"><h2 id="contact-title">Contact</h2><p>For questions about this personal integration or its data handling, <a href="https://github.com/Whittebz/Whittebz.github.io/issues/new">open an issue in the site repository</a>. Keep private document content and credentials out of public issues.</p></div>
+  </section>
+</main>
+<footer><p>Whittebz Workspace MCP · Updated November 15, 2026</p><p><a href="privacy.html">Privacy policy</a> · <a href="https://github.com/Whittebz/Whittebz.github.io">Source</a><br>Independent integration; not affiliated with Google.</p></footer>
+</body>
+</html>
